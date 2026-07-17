@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    height: 100%;
+    line-height: 1.6;
+}
+.navbar {
+    background-color: grey;
+    width: 100%;
+    position: fixed;
+
+
+}   
+nav a {
+    text-decoration: none;
+    scroll-margin-left: 20px;
+    font-weight: bold;
+    font-size: large;
+    transition: 0.4s;
+    color: white;
+    margin-left: 34px;
+
+
+}
+.logo {
+    color: black;
+
+}
+nav a:hover {
+    color:chocolate;
+}
+
