@@ -1,0 +1,74 @@
+body,html {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    height: 100%;
+    line-height: 1.6;
+}
+.navbar {
+    background-color: grey;
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        
+nav {
+    padding-right: 31px;
+}
+
+
+}   
+nav a {
+    text-decoration: none;
+    scroll-margin-left: 20px;
+    font-weight: bold;
+    font-size: large;
+    transition: 0.4s;
+    color: white;
+    margin-left: 34px;
+    
+
+
+}
+.logo {
+    color: whitesmoke;
+}
+
+.bg-1{
+    background-image: url("https://i.pinimg.com/1200x/93/8c/b3/938cb30de88fdaf9c1ff48062c965153.jpg");
+}
+.parallax {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        }
+.img-profile{
+    height:150px;
+    width:150px;
+    border-radius:100%;
+
+}
+
+.content{
+    background-color: beige;
+    color: blueviolet;
+    padding: 40px;
+    border-radius: 10px;
+    width: 65%;
+}
+.content h1{
+    font-size: 5rem;
+}
+nav a:hover {
+    color:chocolate;
+}
+
