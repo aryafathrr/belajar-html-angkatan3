@@ -7,137 +7,181 @@ html {
     line-height: 1.6;
     scroll-behavior: smooth;
 }
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* ==================
+   NAVBAR
+   ================== */
 .navbar {
     background-color: rgb(85, 139, 214);
     width: 100%;
     position: fixed;
+    top: 0;
+    z-index: 100;
     justify-content: space-between;
-        display: flex;
-        align-items: center;
-        padding-left: 10px;
-        
-nav {
-    padding-right: 31px;
     display: flex;
-    position: absolute;
+    align-items: center;
+    padding-left: 10px;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 40px;
+}
 
-}   
-nav a {
+.nav-container button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.navbar nav {
+    padding-right: 31px;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    position: relative;
+}
+
+.navbar nav a {
+    position: relative;
     text-decoration: none;
     scroll-margin-left: 20px;
     font-weight: bold;
     font-size: large;
-    transition: 0.4s;
+    transition: color 0.3s ease;
     color: white;
-    margin-left: 34px;
-    
-
-
+    padding-bottom: 6px;
 }
+
+.navbar nav a:hover {
+    color: chocolate;
+}
+
+/* Garis underline yang digeser posisinya lewat JS */
+.nav-indicator {
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    background-color: chocolate;
+    border-radius: 3px;
+    transition: left 0.3s ease, width 0.3s ease;
+    pointer-events: none;
+}
+
+.navbar nav a.active {
+    color: chocolate;
+}
+
+.menu-close {
+    display: none;
+}
+
+.nav-overlay {
+    display: none;
+}
+
 .logo {
     color: whitesmoke;
 }
 
-.bg-1{
+/* ==================
+   HERO / PARALLAX SECTIONS
+   ================== */
+.bg-1 {
     background-image: url("https://i.pinimg.com/control1/736x/76/93/f8/7693f8d14576ea3e5593b85a331adbab.jpg");
 }
-.bg-2{
+
+.bg-2 {
     background-image: url("https://i.pinimg.com/control1/736x/76/93/f8/7693f8d14576ea3e5593b85a331adbab.jpg");
 }
+
 .parallax {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        overflow: hidden;
-        }
-.img-profile{
-    height:300px;
-    width:300px;
-    border-radius:100%;
-
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
 }
 
-.content{
+.img-profile {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.content {
     background-color: rgba(255, 255, 255, 0.25);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        /* Kasih garis pinggir tipis banget */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: black;
     padding: 40px;
     border-radius: 10px;
     width: 65%;
 }
-.content h1{
+
+.content h1 {
     font-size: 5rem;
 }
-nav a:hover {
-    color:chocolate;
-}
 
-.normal-section{
+/* ==================
+   ABILITY / SKILLS SECTION
+   ================== */
+.normal-section {
     text-align: center;
     padding: 80px 20px;
     background-color: rgb(85, 139, 214);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.container{
+.container {
     max-width: 800px;
     margin: 0 auto;
-
 }
-/* --- Wadah utama kotak skill --- */
+
 .wrapper {
     display: flex;
     justify-content: center;
     gap: 40px;
-    /* Jarak antar kotak dilebarin biar nggak dempetan */
     margin-top: 40px;
     flex-wrap: wrap;
 }
 
-/* --- Kotak Skill & Experience (Efek Kaca) --- */
 .ability {
     background: rgba(255, 255, 255, 0.1);
-    /* Background putih sangat tipis */
     backdrop-filter: blur(10px);
-    /* Efek buram ala kaca */
     border: 1px solid rgba(255, 255, 255, 0.4);
-    /* Garis pinggir tegas tapi transparan */
     padding: 30px;
-    /* Biar lega di dalamnya */
     border-radius: 16px;
-    /* Ujungnya melengkung modern */
     width: 320px;
-    /* Sedikit dilebarin biar teks panjang muat */
     text-align: left;
     color: white;
-    /* Teks jadi putih biar kontras sama background biru lu */
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
-    /* Bayangan tipis */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Transisi mulus */
 }
 
-/* Efek melayang pas di-hover */
 .ability:hover {
     transform: translateY(-10px);
-    /* Kotak naik sedikit */
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-    /* Bayangan makin jelas */
 }
 
-/* --- Judul di dalam kotak (MY SKILLS & EXPERIENCE) --- */
 .ability h3 {
     text-align: center;
     font-size: 1.4rem;
@@ -145,27 +189,21 @@ nav a:hover {
     margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    /* Jarak antar huruf dilebarin */
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    /* Garis bawah elegan */
     padding-bottom: 15px;
 }
 
-/* --- List item (HTML, CSS, dll) dibikin jadi gaya "Tags" --- */
 .ability ul {
     list-style: none;
-    /* Ngilangin titik bawaan HTML */
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    /* Jarak atas bawah antar list */
 }
 
 .ability li {
     background: rgba(255, 255, 255, 0.15);
-    /* Kotak tipis buat tiap list */
     padding: 12px 18px;
     border-radius: 8px;
     font-size: 15px;
@@ -173,73 +211,51 @@ nav a:hover {
     transition: background 0.3s ease, padding-left 0.3s ease;
 }
 
-/* Efek pas item skill-nya disorot */
 .ability li:hover {
     background: rgba(255, 255, 255, 0.25);
-    /* Warna jadi lebih terang */
     padding-left: 25px;
-    /* Teksnya geser dikit ke kanan buat efek interaktif */
 }
 
-.galery{
+
+.galery {
     gap: 22px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-figure img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover
-    transition: transform 0.4 ease;
-    
-}
-
-figure{
+figure {
     transition: 0.3s;
     background-color: white;
     border-radius: 8px;
-    overflow: hidden
+    overflow: hidden;
     margin: 0;
 }
 
-figure:hover{
+figure img {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+    background-color: white;
+    transition: transform 0.4s ease;
+}
+
+figure:hover {
     transform: scale(1.1);
 }
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 40px;
 
-}
-.nav-container button{
-    display: none;
-}
-/ukuran hp/
-@media (max-width 480px) {
-    .galery{
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width 1200px) {
-    .galery{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* --- Styling Dasar Section --- */
+/* ==================
+   CONTACT SECTION
+   ================== */
 .contact {
     padding: 60px 20px;
-    background-color: #f9f9f9; /* Warna background abu-abu terang */
+    background-color: #f9f9f9;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
 }
 
 .section-inner {
     max-width: 900px;
-    margin: 0 auto; /* Biar kontennya selalu di tengah */
+    margin: 0 auto;
 }
 
 .section-label {
@@ -256,23 +272,21 @@ figure:hover{
     color: #111;
 }
 
-/* --- Layout Responsif (Flexbox) --- */
 .contact-content {
     display: flex;
-    flex-wrap: wrap; /* Biar turun ke bawah kalau layarnya sempit (HP) */
-    gap: 40px; /* Jarak antara list kontak dan form */
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-/* --- Styling List Kontak --- */
 .contact-list {
-    flex: 1; /* Mengambil ruang tersisa */
+    flex: 1;
     min-width: 280px;
-    list-style: none; /* Hilangin titik bulat bawaan ul */
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 24px; /* Jarak antar item kontak */
+    gap: 24px;
 }
 
 .contact-list li {
@@ -288,26 +302,25 @@ figure:hover{
     color: #666;
 }
 
-.contact-list a, 
+.contact-list a,
 .contact-list span:not(.contact-label) {
     text-decoration: none;
     font-size: 16px;
-    color: #0056b3; /* Warna link biru elegan */
+    color: #0056b3;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .contact-list a:hover {
-    color: #003d82; /* Warna link saat di-hover */
+    color: #003d82;
 }
 
-/* --- Styling Form --- */
 .contact-form {
     flex: 1;
     min-width: 280px;
     display: flex;
     flex-direction: column;
-    gap: 16px; /* Jarak antar input */
+    gap: 16px;
 }
 
 .contact-form input,
@@ -315,14 +328,13 @@ figure:hover{
     width: 100%;
     padding: 14px 16px;
     border: 1px solid #ddd;
-    border-radius: 8px; /* Ujungnya agak melengkung */
+    border-radius: 8px;
     font-size: 15px;
     font-family: inherit;
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efek saat input lagi diketik */
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
@@ -331,7 +343,7 @@ figure:hover{
 }
 
 .contact-form textarea {
-    resize: vertical; /* Cuma bisa ditarik ke bawah */
+    resize: vertical;
 }
 
 .contact-form button {
@@ -349,47 +361,105 @@ figure:hover{
 .contact-form button:hover {
     background-color: #004494;
 }
-/* =========================================
-   PENGATURAN KHUSUS UNTUK LAYAR HP (MOBILE)
-   ========================================= */
+
+/* ==================
+   RESPONSIVE
+   ================== */
+@media (max-width: 480px) {
+    .galery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .galery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
 
-    /* 1. Bikin navbar numpuk atas-bawah biar muat */
+    .nav-container button.menu-toggle {
+        display: block;
+    }
+
     .navbar {
+        position: fixed;
+        padding-left: 0;
+    }
+
+    /* Panel menu yang geser dari kanan */
+    .navbar nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgb(85, 139, 214);
         flex-direction: column;
-        padding: 10px 0;
-        position: absolute;
-        /* Ubah dari fixed biar gak numpuk konten */
+        align-items: flex-start;
+        padding: 70px 30px;
+        gap: 25px;
+        margin-top: 0;
+        transform: translateX(100%);
+        transition: transform 0.35s ease;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.25);
+        z-index: 200;
     }
 
-    /* 2. Benerin jarak menu navigasi */
-    nav {
-        padding-right: 0;
-        margin-top: 10px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-        /* Pake gap lebih rapi daripada margin */
+    .navbar nav.open {
+        transform: translateX(0);
     }
 
-    nav a {
+    .navbar nav a {
         margin-left: 0;
-        /* Reset margin lama */
-        font-size: 16px;
-        /* Kecilin font menu */
+        font-size: 18px;
     }
 
-    /* 3. Kecilin teks dan kotak utama biar pas di HP */
+    /* Tombol X buat nutup menu, nempel di pojok kanan atas panel */
+    .menu-close {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+
+    .nav-indicator {
+        display: none;
+    }
+
+    /* Overlay gelap di belakang panel */
+    .nav-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s ease;
+        z-index: 150;
+    }
+
+    .nav-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
     .content {
         width: 85%;
         padding: 20px;
         margin-top: 80px;
-        /* Kasih jarak dari navbar atas */
     }
 
     .content h1 {
         font-size: 2.5rem;
-        /* Kecilin teks "Halo, arya fathir" */
     }
 }

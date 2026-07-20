@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portofolio-html-gweh</title>
+    <link rel="stylesheet" href="style-portofolio.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <h2 class="logo">Portofolio</h2>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Buka menu">☰</button>
+            <nav id="navMenu">
+                <button class="menu-close" onclick="toggleMenu()" aria-label="Tutup menu">✕</button>
+                <a href="#home" onclick="closeMenu()">home</a>
+                <a href="#ability" onclick="closeMenu()">ability</a>
+                <a href="#About" onclick="closeMenu()">about</a>
+                <a href="#contact" onclick="closeMenu()">contact</a>
+                <span class="nav-indicator" id="navIndicator"></span>
+            </nav>
+            <div class="nav-overlay" id="navOverlay" onclick="closeMenu()"></div>
+        </div>
+    </header>
+
+    <section id="home" class="parallax bg-1">
+        <div class="content">
+            <h1>Halo, Arya Fathir</h1>
+            <img class="img-profile"
+                src="https://i.pinimg.com/control1/1200x/d6/68/50/d668505413f9c732bd9993799256f2bd.jpg" width="200"
+                alt="Foto profil Arya Fathir">
+            <p>WEB PROGRAMING</p>
+        </div>
+    </section>
+
+    <section id="ability" class="normal-section">
+        <div class="container">
+            <h2>SKILLS</h2>
+            <div class="wrapper">
+
+                <div class="ability">
+                    <h3>My Skills</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>PYTHON</li>
+                    </ul>
+                </div>
+
+                <div class="ability">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>Membuat web statis/landing page</li>
+                        <li>Memahami kode pemrograman</li>
+                        <li>Membuat project arduino uno</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="About" class="parallax bg-2">
+        <div class="content">
+            <h2>About Me</h2>
+            <div class="galery">
+                <figure>
+                    <img src="https://i.pinimg.com/control1/736x/e2/20/25/e22025bc4c3cc73889cdd3c34b0e47b6.jpg"
+                        alt="Gambar 1">
+                    <figcaption>Gambar 1</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.pinimg.com/736x/ee/b1/6c/eeb16cf31ac3cfe6a6b3310150702428.jpg" alt="Gambar 2">
+                    <figcaption>Gambar 2</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.pinimg.com/control1/1200x/39/32/54/393254a80a4e26f1d616ceccb4d0cc54.jpg"
+                        alt="Gambar 3">
+                    <figcaption>Gambar 3</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://i.pinimg.com/control1/1200x/30/d5/22/30d5227a10cb2cb7d8a468d97f9eb704.jpg"
+                        alt="Gambar 4">
+                    <figcaption>Gambar 4</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="section-inner">
+            <p class="section-label">04 — Kontak</p>
+            <h2 class="contact-heading">Mari terhubung.</h2>
+
+            <div class="contact-content">
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:aryyafathrr@gmail.com">aryyafathrr@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Telepon / WA</span>
+                        <a href="tel:+6287882501160">+62 878-8250-1160</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://linkedin.com/in/aryafathrr" target="_blank"
+                            rel="noopener">linkedin.com/in/aryafathrr</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Lokasi</span>
+                        <span>Tebet, Jakarta Selatan</span>
+                    </li>
+                </ul>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Nama" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea rows="4" placeholder="Pesan" required></textarea>
+                    <button type="submit">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navMenu').classList.toggle('open');
+            document.getElementById('navOverlay').classList.toggle('open');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        function closeMenu() {
+            document.getElementById('navMenu').classList.remove('open');
+            document.getElementById('navOverlay').classList.remove('open');
+            document.body.classList.remove('no-scroll');
+        }
+
+        // ==== Scroll-spy: nge-highlight link nav sesuai section yang lagi keliatan ====
+        const navLinks = document.querySelectorAll('#navMenu a');
+        const indicator = document.getElementById('navIndicator');
+        const sections = document.querySelectorAll('section[id]');
+
+        function moveIndicator(link) {
+            if (!link || window.innerWidth <= 768) {
+                indicator.style.width = '0px';
+                return;
+            }
+            indicator.style.width = link.offsetWidth + 'px';
+            indicator.style.left = link.offsetLeft + 'px';
+        }
+
+        function setActiveLink(id) {
+            navLinks.forEach(link => {
+                const isActive = link.getAttribute('href') === '#' + id;
+                link.classList.toggle('active', isActive);
+                if (isActive) moveIndicator(link);
+            });
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveLink(entry.target.id);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => observer.observe(section));
+
+        window.addEventListener('load', () => {
+            const activeLink = document.querySelector('#navMenu a.active') || navLinks[0];
+            setActiveLink(activeLink.getAttribute('href').substring(1));
+        });
+
+        window.addEventListener('resize', () => {
+            const activeLink = document.querySelector('#navMenu a.active');
+            moveIndicator(activeLink);
+        });
+    </script>
+</body>
+
+</html>
