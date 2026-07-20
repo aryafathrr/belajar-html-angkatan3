@@ -5,6 +5,7 @@
    ========================================================= */
 
 :root {
+<<<<<<< HEAD
     --bg: #F7F5F0;
     --bg-alt: #EFEBE3;
     --ink: #22211D;
@@ -41,22 +42,70 @@ body {
 a {
     color: var(--ink);
     text-decoration: none;
+=======
+  --bg: #F7F5F0;
+  --bg-alt: #EFEBE3;
+  --ink: #22211D;
+  --ink-soft: #5C594F;
+  --accent: #9C7A45;
+  --line: #DAD4C6;
+  --white: #FFFFFF;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Work Sans', sans-serif;
+
+  --max-width: 760px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 a:focus-visible,
 button:focus-visible {
+<<<<<<< HEAD
     outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
 
 ul {
     list-style: none;
+=======
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+ul {
+  list-style: none;
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* ============ LAYOUT HELPERS ============ */
 
 .section-inner,
 .hero-inner {
+<<<<<<< HEAD
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 24px;
@@ -75,11 +124,32 @@ ul {
     text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 24px;
+=======
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* ============ HEADER / HERO ============ */
 
 .hero {
+<<<<<<< HEAD
     background: var(--bg-alt);
     padding: 96px 0 80px;
     border-bottom: 1px solid var(--line);
@@ -106,10 +176,39 @@ ul {
     height: 100%;
     object-fit: cover;
     display: block;
+=======
+  background: var(--bg-alt);
+  padding: 96px 0 80px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  width: 156px;
+  height: 156px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* Tampil jika foto belum diganti / gagal dimuat */
 .hero-photo.no-photo::before {
+<<<<<<< HEAD
     content: "Foto";
     display: flex;
     align-items: center;
@@ -165,19 +264,83 @@ ul {
 
 .btn:hover {
     background: var(--accent);
+=======
+  content: "Foto";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--ink-soft);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.hero-text h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.role {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--ink-soft);
+  margin-bottom: 16px;
+}
+
+.bio {
+  max-width: 480px;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: var(--ink);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: var(--accent);
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* ============ ABOUT ============ */
 
 .section-text {
+<<<<<<< HEAD
     font-size: 18px;
     color: var(--ink-soft);
     max-width: 620px;
+=======
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: 620px;
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* ============ EXPERIENCE / TIMELINE ============ */
 
 .timeline {
+<<<<<<< HEAD
     position: relative;
     padding-left: 28px;
     border-left: 1px solid var(--line);
@@ -228,11 +391,64 @@ ul {
 .timeline-desc {
     color: var(--ink-soft);
     max-width: 560px;
+=======
+  position: relative;
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -33px;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline-period {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.timeline-content h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 2px;
+}
+
+.timeline-org {
+  font-size: 15px;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.timeline-desc {
+  color: var(--ink-soft);
+  max-width: 560px;
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* ============ SKILLS ============ */
 
 .skills-list {
+<<<<<<< HEAD
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -245,11 +461,26 @@ ul {
     font-size: 14px;
     color: var(--ink-soft);
     background: var(--white);
+=======
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills-list li {
+  padding: 8px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  background: var(--white);
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* ============ CONTACT ============ */
 
 .contact-section {
+<<<<<<< HEAD
     background: var(--bg-alt);
     border-bottom: none;
 }
@@ -291,20 +522,71 @@ ul {
 
 .contact-list a:hover {
     color: var(--accent);
+=======
+  background: var(--bg-alt);
+  border-bottom: none;
+}
+
+.contact-heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 36px);
+  margin-bottom: 32px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  max-width: 480px;
+}
+
+.contact-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.contact-list a {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-list a:hover {
+  color: var(--accent);
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* ============ FOOTER ============ */
 
 .footer {
+<<<<<<< HEAD
     text-align: center;
     padding: 32px 24px;
     font-size: 13px;
     color: var(--ink-soft);
+=======
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 13px;
+  color: var(--ink-soft);
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* ============ RESPONSIVE ============ */
 
 @media (max-width: 600px) {
+<<<<<<< HEAD
     .hero-inner {
         flex-direction: column;
         text-align: center;
@@ -325,11 +607,34 @@ ul {
     .section {
         padding: 56px 0;
     }
+=======
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }
 
 /* ============ REDUCED MOTION ============ */
 
 @media (prefers-reduced-motion: reduce) {
+<<<<<<< HEAD
     html {
         scroll-behavior: auto;
     }
@@ -337,4 +642,12 @@ ul {
     .btn {
         transition: none;
     }
+=======
+  html {
+    scroll-behavior: auto;
+  }
+  .btn {
+    transition: none;
+  }
+>>>>>>> b31054e2df229edd815591e6565bc8ba33c0cb82
 }

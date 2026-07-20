@@ -4,151 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link portofolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Portofolio - Arya Fathir</title>
+    <link rel="stylesheet" href="style-lat.css">
 </head>
 
 <body>
 
-    <!-- ============ HEADER / HERO ============ -->
-    <header class="hero">
-        <div class="hero-inner">
-            <div class="hero-photo">
-                <!-- Ganti src di bawah ini dengan foto diri kamu -->
-                <img src="foto.jpg" alt="Foto [NAMA LENGKAP]"
-                    onerror="this.style.display='none'; this.parentElement.classList.add('no-photo')">
-            </div>
-            <div class="hero-text">
-                <p class="eyebrow">Curriculum Vitae</p>
-                <h1>Arya Fathir</h1>
-                <p class="role">[JABATAN / PROFESI]</p>
-                <p class="bio">
-                    [Tulis 1–2 kalimat ringkasan singkat tentang dirimu di sini.
-                    Contoh: fokus keahlian, minat profesional, atau nilai yang kamu bawa.]
-                </p>
-                <a href="#contact" class="btn">Hubungi Saya</a>
-            </div>
-        </div>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h2 class="logo">portofolio</h2>
+        <nav>
+            <a href="#home">home</a>
+            <a href="#about">about</a>
+            <a href="#ability">ability</a>
+            <a href="#contact">contact</a>
+        </nav>
     </header>
 
-    <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="parallax bg-1">
+        <div class="content">
+            <h1>Halo, Peeps</h1>
+            <p>ini adalah portofolio gw</p>
+            <img class="img-profile"
+                src="https://i.pinimg.com/control1/1200x/d6/68/50/d668505413f9c732bd9993799256f2bd.jpg" width="200"
+                alt="Foto Profil">
+        </div>
+    </section>
 
-        <!-- ============ ABOUT ============ -->
-        <section class="section" id="about">
-            <div class="section-inner">
-                <p class="section-label">01 — Tentang</p>
-                <p class="section-text">
-                    [Tulis deskripsi diri yang lebih lengkap di sini. Bisa mencakup latar belakang
-                    pendidikan, minat, atau tujuan karier. 2–4 kalimat sudah cukup untuk gaya minimalis.]
-                </p>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="text-section">
+        <h2 class="selection-title" style="text-align: center;">Tentang gw</h2>
+        <div class="row">
+            <div class="column">
+                <p>Kenalin, gw Arya Fathir Widya Dhana. Gw merupakan lulusan SMAN 8 Jakarta angkatan 2025 yang saat ini
+                    lagi jalanin masa semi gap year buat fokus ngejar kampus impian. Di waktu luang, gw suka banget
+                    ngulik desain livery mobil F1 klasik atau mantengin formasi jersey bola.</p>
             </div>
-        </section>
-
-        <!-- ============ EXPERIENCE ============ -->
-        <section class="section" id="experience">
-            <div class="section-inner">
-                <p class="section-label">02 — Pengalaman</p>
-
-                <div class="timeline">
-
-                    <!-- Ulangi blok .timeline-item ini untuk tiap pengalaman -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <p class="timeline-period">[Bulan Tahun] — [Bulan Tahun / Sekarang]</p>
-                            <h3>[Posisi / Jabatan]</h3>
-                            <p class="timeline-org">[Nama Perusahaan / Organisasi]</p>
-                            <p class="timeline-desc">
-                                [Deskripsi singkat tanggung jawab atau pencapaian di posisi ini.]
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <p class="timeline-period">[Bulan Tahun] — [Bulan Tahun]</p>
-                            <h3>[Posisi / Jabatan]</h3>
-                            <p class="timeline-org">[Nama Perusahaan / Organisasi]</p>
-                            <p class="timeline-desc">
-                                [Deskripsi singkat tanggung jawab atau pencapaian di posisi ini.]
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <p class="timeline-period">[Bulan Tahun] — [Bulan Tahun]</p>
-                            <h3>[Posisi / Jabatan]</h3>
-                            <p class="timeline-org">[Nama Perusahaan / Organisasi]</p>
-                            <p class="timeline-desc">
-                                [Deskripsi singkat tanggung jawab atau pencapaian di posisi ini.]
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Salin/hapus blok .timeline-item sesuai jumlah pengalamanmu -->
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ============ SKILLS ============ -->
-        <section class="section" id="skills">
-            <div class="section-inner">
-                <p class="section-label">03 — Keahlian</p>
-                <ul class="skills-list">
-                    <!-- Tambah/hapus item sesuai kebutuhan -->
-                    <li>[Skill 1]</li>
-                    <li>[Skill 2]</li>
-                    <li>[Skill 3]</li>
-                    <li>[Skill 4]</li>
-                    <li>[Skill 5]</li>
-                    <li>[Skill 6]</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- ============ CONTACT ============ -->
-        <section class="section contact-section" id="contact">
-            <div class="section-inner">
-                <p class="section-label">04 — Kontak</p>
-                <h2 class="contact-heading">Mari terhubung.</h2>
-                <ul class="contact-list">
-                    <li>
-                        <span class="contact-label">Email</span>
-                        <a href="mailto:[email@contoh.com]">[email@contoh.com]</a>
-                    </li>
-                    <li>
-                        <span class="contact-label">Telepon / WA</span>
-                        <a href="tel:+62xxxxxxxxxx">[+62 xxx-xxxx-xxxx]</a>
-                    </li>
-                    <li>
-                        <span class="contact-label">LinkedIn</span>
-                        <a href="https://linkedin.com/in/username" target="_blank"
-                            rel="noopener">[linkedin.com/in/username]</a>
-                    </li>
-                    <li>
-                        <span class="contact-label">Lokasi</span>
-                        <span>[Kota, Provinsi]</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <p>&copy; <span id="year"></span> [NAMA LENGKAP]. Dibuat dengan sederhana.</p>
-    </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+        </div>
+    </section>
 
 </body>
 
